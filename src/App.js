@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar, Home, About, Footer } from "./components";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="App">
@@ -20,6 +20,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
