@@ -25,10 +25,10 @@ code {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid red;
   width: 100%;
   max-width: 800px;
   padding: 1rem 0;
+  margin: 0 auto;
+  height: 70vh;
 }

@@ -1,6 +1,8 @@
+import "../css/Home.css";
+
 const Home = () => {
   return (
-    <div>
+    <div id="body">
       <h1>Homepage here</h1>
     </div>
   );
