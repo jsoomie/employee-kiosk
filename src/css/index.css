@@ -21,7 +21,7 @@ code {
 }
 
 .App {
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 .container {
@@ -31,4 +31,5 @@ code {
   padding: 1rem 0;
   margin: 0 auto;
   height: 70vh;
+  min-height: 700px;
 }

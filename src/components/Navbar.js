@@ -1,5 +1,7 @@
 import "../css/Navbar.css";
+import "../css/Search.css";
 import { Link } from "react-router-dom";
+import { Search } from "../components";
 
 const Navbar = () => {
   return (
@@ -18,6 +20,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="break"></div>
+      <div>
+        <Search />
       </div>
     </nav>
   );

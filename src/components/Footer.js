@@ -3,7 +3,7 @@ import "../css/Footer.css";
 const Footer = () => {
   return (
     <div id="footer">
-      <h1>Footer here</h1>
+      <h1>Employee Kiosk</h1>
     </div>
   );
 };
