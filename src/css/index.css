@@ -21,5 +21,14 @@ code {
 }
 
 .App {
-  margin-top: 5rem;
+  margin-top: 6rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 0;
 }

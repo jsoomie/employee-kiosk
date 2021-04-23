@@ -10,13 +10,13 @@ nav {
   color: white;
 }
 
-.nav-container {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  padding: 1rem 0;
 }
 
 nav ul {
@@ -38,5 +38,10 @@ nav ul {
 }
 
 nav li {
-  padding-left: 4rem;
+  padding-left: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
 }
