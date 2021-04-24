@@ -65,10 +65,11 @@ nav a {
   width: 750px;
   max-width: 800px;
   padding: 0.5rem;
+  outline: none;
 }
 
 #searchbar button {
-  height: 1.9rem;
+  height: 1.89rem;
   width: 50px;
   border: 0;
   outline: none;
