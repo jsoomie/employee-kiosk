@@ -5,10 +5,18 @@ const Card = ({ image, name, phone, email, dob }) => {
     <div className="card">
       <img src={image} alt={name} />
       <div className="card-body">
-        <div>{name}</div>
-        <div>{phone}</div>
-        <div>{email}</div>
-        <div>{dob}</div>
+        <div>
+          <strong>Name:</strong> {name}
+        </div>
+        <div>
+          <strong>Number:</strong> {phone}
+        </div>
+        <div>
+          <strong>Email:</strong> {email}
+        </div>
+        <div>
+          <strong>DOB:</strong> {dob}
+        </div>
       </div>
     </div>
   );

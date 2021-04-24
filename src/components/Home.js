@@ -2,7 +2,7 @@ import "../css/Home.css";
 import { Card } from ".";
 
 const Home = () => {
-  const image = "https://via.placeholder.com/200";
+  const image = "https://via.placeholder.com/250";
   const name = "Alice Wonderland";
   const phone = "1-555-5555";
   const email = "email@email.com";
