@@ -6,6 +6,7 @@ import { userList } from "../API/Users";
 const Home = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState("asc");
+  const [search, setSearch] = useState("");
 
   // Brings in data
   useEffect(() => {
@@ -22,15 +23,25 @@ const Home = () => {
     return isReversed * a.name.last.localeCompare(b.name.last);
   });
 
+  // Searches through most fields
+  const dataSortedFilter = dataSorted.filter(
+    (item) =>
+      item.name.first.toLowerCase().includes(search) ||
+      item.name.last.toLowerCase().includes(search) ||
+      item.email.toLowerCase().includes(search) ||
+      item.phone.includes(search) ||
+      item.dob.date.includes(search)
+  );
+
   return (
     <>
-      <Search />
+      <Search onSearchChange={setSearch} />
       {/* Brings in sort button and passing setSort into it */}
       <SortButton onSortChange={setSort} />
 
       <div id="body">
-        {dataSorted.length >= 0 ? (
-          dataSorted.map(
+        {dataSortedFilter.length >= 0 ? (
+          dataSortedFilter.map(
             ({
               login: { uuid },
               picture: { large: image },

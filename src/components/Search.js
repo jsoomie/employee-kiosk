@@ -1,12 +1,20 @@
-import { GiMagnifyingGlass } from "react-icons/gi";
+import { useCallback } from "react";
 
-const Search = () => {
+const Search = ({ onSearchChange }) => {
+  const handleSearchChange = useCallback(
+    (event) => {
+      onSearchChange(event.target.value);
+    },
+    [onSearchChange]
+  );
   return (
     <div id="searchbar">
-      <input id="search-input" type="text" placeholder="Search" />
-      <button>
-        <GiMagnifyingGlass />
-      </button>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search"
+        onChange={handleSearchChange}
+      />
     </div>
   );
 };
