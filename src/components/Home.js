@@ -5,6 +5,7 @@ import { userList } from "../API/Users";
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const [sort, setSort] = useState("asc");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,13 +15,18 @@ const Home = () => {
     fetchData();
   }, []);
 
+  const dataSorted = data.sort((a, b) => {
+    const isReversed = sort === "asc" ? 1 : -1;
+    return isReversed * a.name.last.localeCompare(b.name.last);
+  });
+
   return (
     <>
-      <SortButton />
+      <SortButton onSortChange={setSort} />
 
       <div id="body">
-        {data.length > 0 ? (
-          data.map(
+        {dataSorted.length >= 0 ? (
+          dataSorted.map(
             ({
               login: { uuid },
               picture: { large: image },
