@@ -7,6 +7,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState("asc");
 
+  // Brings in data
   useEffect(() => {
     const fetchData = async () => {
       const res = await userList();
@@ -15,6 +16,7 @@ const Home = () => {
     fetchData();
   }, []);
 
+  // Sorts users by last name either asc or desc order
   const dataSorted = data.sort((a, b) => {
     const isReversed = sort === "asc" ? 1 : -1;
     return isReversed * a.name.last.localeCompare(b.name.last);
@@ -22,6 +24,7 @@ const Home = () => {
 
   return (
     <>
+      {/* Brings in sort button and passing setSort into it */}
       <SortButton onSortChange={setSort} />
 
       <div id="body">

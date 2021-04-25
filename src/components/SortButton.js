@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 
 const SortButton = ({ onSortChange }) => {
+  // Calls back to setSort in Home.js
   const handleSortChange = useCallback(
     (event) => {
       onSortChange(event.target.value);

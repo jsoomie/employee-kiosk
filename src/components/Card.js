@@ -19,7 +19,11 @@ const Card = ({ image, firstName, lastName, phone, email, dob }) => {
       />
       <div className="card-body">
         <div>
-          <strong>Name:</strong> {firstName} {lastName}
+          <strong>
+            <h2>
+              {lastName}, {firstName}
+            </h2>
+          </strong>
         </div>
         <div>
           <strong>Number:</strong> {phone}
