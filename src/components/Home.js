@@ -19,7 +19,7 @@ const Home = () => {
       <SortButton />
 
       <div id="body">
-        {data ? (
+        {data.length > 0 ? (
           data.map(
             ({
               login: { uuid },
