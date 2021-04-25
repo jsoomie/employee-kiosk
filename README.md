@@ -18,16 +18,16 @@ Welcome to the Employee Kiosk! A place where you can view your employees easily 
 
 ## links
 
-- [Employee Kiosk]()
+- [Employee Kiosk](https://sksmejn.github.io/)
 - [Github Link](https://github.com/sksmejn/employee-kiosk)
 
 ## usage
 
-Simply head over the [website]() and either search or sort!
+Simply head over the [website](https://sksmejn.github.io/) and either search or sort!
 
 ## installation
 
-No need for installation! Just head over to the [website]() and use it accordiingly!
+No need for installation! Just head over to the [website](https://sksmejn.github.io/) and use it accordiingly!
 
 ## contributions
 
