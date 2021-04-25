@@ -40,7 +40,7 @@ const Home = () => {
       <SortButton onSortChange={setSort} />
 
       <div id="body">
-        {dataSortedFilter.length >= 0 ? (
+        {dataSortedFilter.length ? (
           dataSortedFilter.map(
             ({
               login: { uuid },
@@ -63,7 +63,9 @@ const Home = () => {
             )
           )
         ) : (
-          <p>No employee in database!</p>
+          <h1 style={{ opacity: 0.5, marginTop: "1rem" }}>
+            No such employee in database from search criteria!
+          </h1>
         )}
       </div>
     </>

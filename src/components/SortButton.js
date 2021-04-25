@@ -10,7 +10,7 @@ const SortButton = ({ onSortChange }) => {
   );
 
   return (
-    <div>
+    <div style={{ marginBottom: "1rem" }}>
       <label htmlFor="sort">Sort By: </label>
       <select name="sort" id="sort-button" onChange={handleSortChange}>
         <option value="asc">Ascending</option>
