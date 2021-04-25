@@ -1,42 +1,46 @@
 import "../css/Home.css";
 import { Card } from ".";
+import { useState, useEffect } from "react";
+import { userList } from "../API/Users";
 
 const Home = () => {
-  const image = "https://via.placeholder.com/250";
-  const name = "Alice Wonderland";
-  const phone = "1-555-5555";
-  const email = "email@email.com";
-  const dob = "01-01-1990";
-  const id = "1";
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await userList();
+      setData(res.data.results);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div id="body">
-      <Card
-        id={id}
-        image={image}
-        name={name}
-        phone={phone}
-        email={email}
-        dob={dob}
-      />
-
-      <Card
-        id={id}
-        image={image}
-        name={name}
-        phone={phone}
-        email={email}
-        dob={dob}
-      />
-
-      <Card
-        id={id}
-        image={image}
-        name={name}
-        phone={phone}
-        email={email}
-        dob={dob}
-      />
+      {data ? (
+        data.map(
+          ({
+            login: { uuid },
+            picture: { large: image },
+            name: { first: firstName },
+            name: { last: lastName },
+            email,
+            phone,
+            dob: { date },
+          }) => (
+            <Card
+              key={uuid}
+              image={image}
+              firstName={firstName}
+              lastName={lastName}
+              phone={phone}
+              email={email}
+              dob={date}
+            />
+          )
+        )
+      ) : (
+        <p>No employee in database!</p>
+      )}
     </div>
   );
 };
