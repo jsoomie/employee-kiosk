@@ -4,5 +4,6 @@ import { default as About } from "./About";
 import { default as Footer } from "./Footer";
 import { default as Search } from "./Search";
 import { default as Card } from "./Card";
+import { default as SortButton } from "./SortButton";
 
-export { Navbar, Home, About, Footer, Search, Card };
+export { Navbar, Home, About, Footer, Search, Card, SortButton };
