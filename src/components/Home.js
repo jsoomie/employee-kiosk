@@ -1,5 +1,5 @@
 import "../css/Home.css";
-import { Card, SortButton } from ".";
+import { Card, SortButton, Search } from ".";
 import { useState, useEffect } from "react";
 import { userList } from "../API/Users";
 
@@ -24,6 +24,7 @@ const Home = () => {
 
   return (
     <>
+      <Search />
       {/* Brings in sort button and passing setSort into it */}
       <SortButton onSortChange={setSort} />
 
