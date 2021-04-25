@@ -11,7 +11,12 @@ const Card = ({ image, firstName, lastName, phone, email, dob }) => {
 
   return (
     <div className="card">
-      <img src={image} alt={`Pic of ${firstName} ${lastName}`} />
+      <img
+        src={image}
+        alt={`Pic of ${firstName} ${lastName}`}
+        width="200px"
+        height="200px"
+      />
       <div className="card-body">
         <div>
           <strong>Name:</strong> {firstName} {lastName}

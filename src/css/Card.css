@@ -1,8 +1,16 @@
 .card {
-  border: 1px solid red;
+  border: 1px solid #333;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 5px;
   margin: 0.4rem;
+  width: 100%;
+  display: flex;
 }
 
 .card-body {
   padding: 1rem;
+}
+
+.card-body div {
+  padding: 0.7rem 0;
 }
